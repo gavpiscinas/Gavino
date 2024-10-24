@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Accesorios de Pileta</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para el menú */
+        .navbar {
+            background-color: #003366; /* Azul marino */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important; /* Color dorado en hover */
+        }
+        .hero {
+            background: url('img/hero-background.jpg') no-repeat center center; 
+            background-size: cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        /* Estilo para el modal de contacto */
+        .modal-content {
+            background-color: #0099cc; /* Azul claro para el modal */
+            color: #ffffff; /* Texto blanco */
+        }
+        .modal-body a {
+            color: #ffffff; /* Enlaces en blanco */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Accesorios de Pileta</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contacto</a> <!-- Abre el modal de contacto -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Bienvenidos a Nuestro Catálogo</h1>
+            <p>Todo lo que necesitas para disfrutar de tu pileta.</p>
+        </div>
+    </div>
+
+    <!-- Carrusel de Imágenes -->
+    <div id="carouselExampleIndicators" class="carousel slide my-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carrusel1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/carrusel3.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+    <div class="container my-5" id="productos">
+        <h2 class="text-center mb-4">Nuestros Productos</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-primary">
+                    <img src="img/accesorio1.jpg" class="card-img-top" alt="Accesorio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorio para Pileta 1</h5>
+                        <p class="card-text">Descripción breve del producto 1. Ideal para mantener tu pileta limpia y divertida.</p>
+                        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-primary">
+                    <img src="img/accesorio2.jpg" class="card-img-top" alt="Accesorio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorio para Pileta 2</h5>
+                        <p class="card-text">Descripción breve del producto 2. Perfecto para disfrutar del verano.</p>
+                        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-primary">
+                    <img src="img/accesorio3.jpg" class="card-img-top" alt="Accesorio 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorio para Pileta 3</h5>
+                        <p class="card-text">Descripción breve del producto 3. Aumenta la diversión en tu pileta.</p>
+                        <a href="https://wa.me/1234567890" class="btn btn-primary" target="_blank">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contacto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">+54 123 456 7890</a></p> <!-- Reemplaza con tu número real -->
+                    <p>Instagram: <a href="https://www.instagram.com/tu_usuario" target="_blank">@tu_usuario</a></p> <!-- Reemplaza con tu usuario de Instagram -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary text-white text-center p-3">
+        <p>&copy; 2024 Accesorios de Pileta. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
