@@ -1,17 +1,87 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.card {
-    border-radius: 0.5rem;
+/* Navbar Styling */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85); /* Letras más claras en la barra de navegación */
+    font-weight: 600; /* Opcional: texto ligeramente más grueso */
 }
 
-.card-img-top {
-    border-radius: 0.5rem 0.5rem 0 0;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff; /* Blanco puro al pasar el cursor */
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Product Card Styles */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.product-card .btn-contact {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.product-card:hover .card-body {
+    background-color: #f1f1f1;
+}
+
+/* Floating WhatsApp Button */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: #fff;
+    font-size: 24px;
+    width: 60px;         /* Ancho y alto iguales para forma circular */
+    height: 60px;
+    display: flex;
+    align-items: center; /* Centra el icono verticalmente */
+    justify-content: center; /* Centra el icono horizontalmente */
+    border-radius: 50%;  /* Hace que el botón sea circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el botón */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #22c354; /* Color un poco más oscuro al hacer hover */
+    transform: scale(1.1); /* Efecto de ampliación al pasar el cursor */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #212529;
+    color: #adb5bd;
+}
+.footer-title {
+    font-size: 2rem;
+    color: #ffffff;
+}
+.contact-icons i {
+    color: #fff;
+    transition: color 0.3s;
+}
+.contact-icons i:hover {
+    color: #28a745;
 }
