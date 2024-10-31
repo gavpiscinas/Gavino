@@ -85,3 +85,22 @@ body {
 .contact-icons i:hover {
     color: #28a745;
 }
+/* Estilo para las flechas de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border-radius: 50%; /* Hace las flechas circulares */
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el cursor */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Reduce el área de clic */
+}
+
